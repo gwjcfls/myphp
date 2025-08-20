@@ -17,7 +17,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     // 设置字符集
-    $pdo->exec("SET NAMES 'utf8mb4'");
+    // $pdo->exec("SET NAMES 'utf8mb4'");
 } catch(PDOException $e) {
     // 输出错误信息
     die("数据库连接失败: " . $e->getMessage());
@@ -37,5 +37,6 @@ function log_operation($pdo, $user, $role, $action, $target = null, $details = n
     ]);
 }
 ?>    
+
 
 
