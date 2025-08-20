@@ -4,10 +4,10 @@ date_default_timezone_set('Asia/Shanghai');
 setlocale(LC_TIME, 'zh_CN');
 
 // 数据库连接配置
-$host = 'localhost';
-$dbname = 'test';
-$username = 'root';
-$password = '123456';
+$host = 'ep-dawn-math-adrn7vuz-pooler.c-2.us-east-1.aws.neon.tech';
+$dbname = 'neondb';
+$username = 'neondb_owner';
+$password = 'npg_2YJQzoN3eaUt';
 
 try {
     // 创建PDO连接
@@ -37,4 +37,5 @@ function log_operation($pdo, $user, $role, $action, $target = null, $details = n
     ]);
 }
 ?>    
+
 
