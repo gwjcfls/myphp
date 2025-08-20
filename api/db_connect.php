@@ -11,7 +11,7 @@ $password = '123456';
 
 try {
     // 创建PDO连接
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $username, $password);
     
     // 设置错误模式为异常
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -37,3 +37,4 @@ function log_operation($pdo, $user, $role, $action, $target = null, $details = n
     ]);
 }
 ?>    
+
