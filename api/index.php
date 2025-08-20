@@ -82,9 +82,9 @@ if (isset($_GET['vote']) && is_numeric($_GET['vote']) && isset($_GET['action']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>语之声·校园点歌站</title>
     
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="css/tailwind.css"> -->
-    <script src="js/tailwindcss.js"></script>
+<!--     <script src="js/tailwindcss.js"></script> -->
     <!-- <link. rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
