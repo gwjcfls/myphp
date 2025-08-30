@@ -97,7 +97,7 @@ try {
     }
 
     // 重置Session ID（防Session固定攻击，关键步骤）
-    session_regenerate_id(true);
+    // session_regenerate_id(true);
 
     // 存储管理员核心信息到Session（仅存必要字段，不存密码）
     $_SESSION['admin'] = [
@@ -124,3 +124,4 @@ try {
     ]);
     exit;
 }
+
