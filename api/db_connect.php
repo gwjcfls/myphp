@@ -26,7 +26,7 @@ try {
 // 通用操作日志写入函数
 function log_operation($pdo, $user, $role, $action, $target = null, $details = null) {
     $ip = $_SERVER['REMOTE_ADDR'] ?? '';
-    $stmt = $pdo->prepare("INSERT INTO operation_logs (user, role, action, target, details, ip, created_at) VALUES (:user, :role, :action, :target, :details, :ip, NOW())");
+    $stmt = $pdo->prepare("INSERT INTO operation_logs ("user", role, action, target, details, ip, created_at) VALUES (:user, :role, :action, :target, :details, :ip, NOW())");
     $stmt->execute([
         'user' => $user,
         'role' => $role,
@@ -37,6 +37,7 @@ function log_operation($pdo, $user, $role, $action, $target = null, $details = n
     ]);
 }
 ?>    
+
 
 
 
