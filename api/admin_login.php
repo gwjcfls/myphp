@@ -1,11 +1,11 @@
 <?php
 // 1. 会话安全配置（必须放在 session_start() 之前，且无任何输出）
-ini_set('session.cookie_secure', 'On');       // 仅HTTPS传输Cookie（生产环境启用，本地HTTP可设为Off）
-ini_set('session.cookie_httponly', 'On');     // 禁止JS访问Cookie，防XSS
-ini_set('session.cookie_samesite', 'Strict'); // 严格同源策略，防CSRF
-ini_set('session.cookie_lifetime', 0);        // 会话结束后Cookie失效（关闭浏览器即删）
-ini_set('session.gc_maxlifetime', 3600);      // Session 有效期1小时（秒）
-ini_set('session.regenerate_id', 'On');       // 每次请求重置Session ID，防固定攻击
+//ini_set('session.cookie_secure', 'On');       // 仅HTTPS传输Cookie（生产环境启用，本地HTTP可设为Off）
+//ini_set('session.cookie_httponly', 'On');     // 禁止JS访问Cookie，防XSS
+//ini_set('session.cookie_samesite', 'Strict'); // 严格同源策略，防CSRF
+//ini_set('session.cookie_lifetime', 0);        // 会话结束后Cookie失效（关闭浏览器即删）
+//ini_set('session.gc_maxlifetime', 3600);      // Session 有效期1小时（秒）
+//ini_set('session.regenerate_id', 'On');       // 每次请求重置Session ID，防固定攻击
 
 // 初始化Session（确保无任何输出后执行）
 if (session_status() === PHP_SESSION_NONE) {
@@ -124,4 +124,5 @@ try {
     ]);
     exit;
 }
+
 
