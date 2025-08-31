@@ -1,11 +1,11 @@
 <?php
 // 会话安全配置（放在session_start()之前）
-ini_set('session.cookie_secure', 'On');
-ini_set('session.cookie_httponly', 'On');
-ini_set('session.cookie_samesite', 'Strict');
-ini_set('session.cookie_lifetime', 0);
-ini_set('session.gc_maxlifetime', 3600);
-ini_set('session.regenerate_id', 'On');
+// ini_set('session.cookie_secure', 'On');
+// ini_set('session.cookie_httponly', 'On');
+// ini_set('session.cookie_samesite', 'Strict');
+// ini_set('session.cookie_lifetime', 0);
+// ini_set('session.gc_maxlifetime', 3600);
+// ini_set('session.regenerate_id', 'On');
 session_start();
 require_once 'db_connect.php';
 
@@ -102,7 +102,7 @@ try {
     $_SESSION['admin_logged_in'] = true;
     $_SESSION['admin_username'] = $admin['username'];
     $_SESSION['admin_role'] = $admin['role'];
-    session_regenerate_id(true); // 登录成功刷新Session ID
+    // session_regenerate_id(true); // 登录成功刷新Session ID
 
     echo json_encode([
         'success' => true,
@@ -112,4 +112,5 @@ try {
 } catch (Exception $e) {
     echo json_encode(['success' => false, 'message' => $e->getMessage()]);
 }
+
 ?>
