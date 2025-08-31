@@ -1,11 +1,11 @@
 <?php
 // 会话安全配置（放在session_start()之前）
-ini_set('session.cookie_secure', 'On'); // 仅通过HTTPS传输Cookie（需服务器支持HTTPS）
-ini_set('session.cookie_httponly', 'On'); // 禁止JS读取Cookie，防止XSS窃取
-ini_set('session.cookie_samesite', 'Strict'); // 限制跨站请求携带Cookie，防CSRF
-ini_set('session.cookie_lifetime', 0); // 会话Cookie随浏览器关闭失效
-ini_set('session.gc_maxlifetime', 3600); // 会话有效期1小时（无操作自动失效）
-ini_set('session.regenerate_id', 'On'); // 每次请求刷新Session ID，防止固定攻击
+// ini_set('session.cookie_secure', 'On'); // 仅通过HTTPS传输Cookie（需服务器支持HTTPS）
+// ini_set('session.cookie_httponly', 'On'); // 禁止JS读取Cookie，防止XSS窃取
+// ini_set('session.cookie_samesite', 'Strict'); // 限制跨站请求携带Cookie，防CSRF
+// ini_set('session.cookie_lifetime', 0); // 会话Cookie随浏览器关闭失效
+// ini_set('session.gc_maxlifetime', 3600); // 会话有效期1小时（无操作自动失效）
+// ini_set('session.regenerate_id', 'On'); // 每次请求刷新Session ID，防止固定攻击
 
 session_start();
 // 检查是否已登录
@@ -24,8 +24,8 @@ require_once 'db_connect.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>星声校园点歌台 - 管理后台</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+<!--     <script src="https://cdn.tailwindcss.com"></script> -->
+<!--     <link rel="stylesheet" href="css/font-awesome.min.css"> --> -->
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
